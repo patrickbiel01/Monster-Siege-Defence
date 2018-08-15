@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Biel_Patrick_Tower_Defence/MainViewController.swift"
+            timestampString = "552484863.31575"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_099184B43C4C2434503C1A4E00F9ACF6_func0"
+                  moduleName = "Biel_Patrick_Tower_Defence"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickbiel/Desktop/Biel_Patrick_Tower_Defence/Biel_Patrick_Tower_Defence/MainViewController.swift"
+                  timestampString = "551920736.123145"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Biel_Patrick_Tower_Defence.MainViewController.savedState.unsafeMutableAddressor : Biel_Patrick_Tower_Defence.GameState"
+                  moduleName = "Biel_Patrick_Tower_Defence"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickbiel/Desktop/Biel_Patrick_Tower_Defence/Biel_Patrick_Tower_Defence/MainViewController.swift"
+                  timestampString = "551920736.125828"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Biel_Patrick_Tower_Defence.MainViewController.savedState.getter : Biel_Patrick_Tower_Defence.GameState"
+                  moduleName = "Biel_Patrick_Tower_Defence"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickbiel/Desktop/Biel_Patrick_Tower_Defence/Biel_Patrick_Tower_Defence/MainViewController.swift"
+                  timestampString = "551920736.127911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Biel_Patrick_Tower_Defence.MainViewController.savedState.setter : Biel_Patrick_Tower_Defence.GameState"
+                  moduleName = "Biel_Patrick_Tower_Defence"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrickbiel/Desktop/Biel_Patrick_Tower_Defence/Biel_Patrick_Tower_Defence/MainViewController.swift"
+                  timestampString = "551920736.130535"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -7,16 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541588AC20C9905900582DA2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541588AB20C9905800582DA2 /* GameState.swift */; };
+		54299DED20B864FB00F68ABE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54299DEC20B864FB00F68ABE /* Button.swift */; };
+		54299DEF20B86B5700F68ABE /* BloodSplater.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54299DEE20B86B5700F68ABE /* BloodSplater.sks */; };
+		5433BBE020CADC3A00896953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5433BBDF20CADC3A00896953 /* MainViewController.swift */; };
+		54565A2420ADE01900F906E2 /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54565A2320ADE01900F906E2 /* CountDownTimer.swift */; };
+		5468FB6620AC90F800708814 /* Outpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5468FB6520AC90F800708814 /* Outpost.swift */; };
+		5468FB6820AC919D00708814 /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5468FB6720AC919D00708814 /* Castle.swift */; };
+		546A063C20B7280F00077713 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A063B20B7280F00077713 /* Menu.swift */; };
+		54AA2C7820A9EB4300ABD8E6 /* MonsterAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA2C7720A9EB4300ABD8E6 /* MonsterAttributes.swift */; };
+		54C25F7320C5AAAA00114A8D /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C25F7220C5AAAA00114A8D /* LeaderboardViewController.swift */; };
 		54CE62A420A5F13B00AC350A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62A320A5F13B00AC350A /* AppDelegate.swift */; };
 		54CE62A620A5F13B00AC350A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54CE62A520A5F13B00AC350A /* GameScene.sks */; };
 		54CE62A820A5F13B00AC350A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54CE62A720A5F13B00AC350A /* Actions.sks */; };
 		54CE62AA20A5F13B00AC350A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62A920A5F13B00AC350A /* GameScene.swift */; };
 		54CE62AC20A5F13B00AC350A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62AB20A5F13B00AC350A /* GameViewController.swift */; };
-		54CE62AF20A5F13B00AC350A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE62AD20A5F13B00AC350A /* Main.storyboard */; };
 		54CE62B120A5F13B00AC350A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CE62B020A5F13B00AC350A /* Assets.xcassets */; };
 		54CE62B420A5F13B00AC350A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE62B220A5F13B00AC350A /* LaunchScreen.storyboard */; };
 		54CE62BF20A5F13B00AC350A /* Biel_Patrick_Tower_DefenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62BE20A5F13B00AC350A /* Biel_Patrick_Tower_DefenceTests.swift */; };
 		54CE62CA20A5F13B00AC350A /* Biel_Patrick_Tower_DefenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62C920A5F13B00AC350A /* Biel_Patrick_Tower_DefenceUITests.swift */; };
+		54CE62D820A5F5C300AC350A /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62D720A5F5C300AC350A /* Actor.swift */; };
+		54CE62DA20A5F60200AC350A /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62D920A5F60200AC350A /* Monster.swift */; };
+		54CE62DE20A5F8A600AC350A /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE62DD20A5F8A600AC350A /* Base.swift */; };
+		54F2914420C84FD200BDC2A2 /* MeteorAfterEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54F2914320C84FD200BDC2A2 /* MeteorAfterEffect.sks */; };
+		61611DE520D2D9ED0008D4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61611DE420D2D9ED0008D4E8 /* Main.storyboard */; };
+		6168201320CE04C30072BD54 /* building_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6168201220CE04C30072BD54 /* building_sound.mp3 */; };
+		61741D3820D2F38700C09071 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61741D3720D2F38700C09071 /* RulesViewController.swift */; };
+		61ABCBAE20E5474200C99BEE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ABCBAD20E5474200C99BEE /* TutorialViewController.swift */; };
+		61D5603920C8A63800EC1CE2 /* PauseMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D5603820C8A63800EC1CE2 /* PauseMenu.swift */; };
+		61E8BA1220CD6EAC003E99C8 /* ambient_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E8BA1120CD6EAC003E99C8 /* ambient_music.mp3 */; };
+		61E8BA1420CD6EB3003E99C8 /* oof.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61E8BA1320CD6EB3003E99C8 /* oof.wav */; };
+		61E8BA1620CD6EBA003E99C8 /* battle_music.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61E8BA1520CD6EBA003E99C8 /* battle_music.wav */; };
+		61E8BA1820CD6EC2003E99C8 /* meteor_crash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E8BA1720CD6EC2003E99C8 /* meteor_crash.mp3 */; };
+		61FC4C7120C9FA8000B69E5E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC4C7020C9FA8000B69E5E /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +60,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		541588AB20C9905800582DA2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		54299DEC20B864FB00F68ABE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		54299DEE20B86B5700F68ABE /* BloodSplater.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BloodSplater.sks; sourceTree = "<group>"; };
+		5433BBDF20CADC3A00896953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		54565A2320ADE01900F906E2 /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
+		5468FB6520AC90F800708814 /* Outpost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outpost.swift; sourceTree = "<group>"; };
+		5468FB6720AC919D00708814 /* Castle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
+		546A063B20B7280F00077713 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		54AA2C7720A9EB4300ABD8E6 /* MonsterAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterAttributes.swift; sourceTree = "<group>"; };
+		54C25F7220C5AAAA00114A8D /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		54CE62A020A5F13B00AC350A /* Biel_Patrick_Tower_Defence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biel_Patrick_Tower_Defence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CE62A320A5F13B00AC350A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CE62A520A5F13B00AC350A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		54CE62A720A5F13B00AC350A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		54CE62A920A5F13B00AC350A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		54CE62AB20A5F13B00AC350A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		54CE62AE20A5F13B00AC350A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54CE62B020A5F13B00AC350A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54CE62B320A5F13B00AC350A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54CE62B520A5F13B00AC350A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +85,20 @@
 		54CE62C520A5F13B00AC350A /* Biel_Patrick_Tower_DefenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Biel_Patrick_Tower_DefenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CE62C920A5F13B00AC350A /* Biel_Patrick_Tower_DefenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biel_Patrick_Tower_DefenceUITests.swift; sourceTree = "<group>"; };
 		54CE62CB20A5F13B00AC350A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CE62D720A5F5C300AC350A /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		54CE62D920A5F60200AC350A /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		54CE62DD20A5F8A600AC350A /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		54F2914320C84FD200BDC2A2 /* MeteorAfterEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MeteorAfterEffect.sks; sourceTree = "<group>"; };
+		61611DE420D2D9ED0008D4E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6168201220CE04C30072BD54 /* building_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = building_sound.mp3; sourceTree = "<group>"; };
+		61741D3720D2F38700C09071 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		61ABCBAD20E5474200C99BEE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		61D5603820C8A63800EC1CE2 /* PauseMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenu.swift; sourceTree = "<group>"; };
+		61E8BA1120CD6EAC003E99C8 /* ambient_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ambient_music.mp3; sourceTree = "<group>"; };
+		61E8BA1320CD6EB3003E99C8 /* oof.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = oof.wav; sourceTree = "<group>"; };
+		61E8BA1520CD6EBA003E99C8 /* battle_music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = battle_music.wav; sourceTree = "<group>"; };
+		61E8BA1720CD6EC2003E99C8 /* meteor_crash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meteor_crash.mp3; sourceTree = "<group>"; };
+		61FC4C7020C9FA8000B69E5E /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +154,33 @@
 				54CE62A720A5F13B00AC350A /* Actions.sks */,
 				54CE62A920A5F13B00AC350A /* GameScene.swift */,
 				54CE62AB20A5F13B00AC350A /* GameViewController.swift */,
-				54CE62AD20A5F13B00AC350A /* Main.storyboard */,
+				61611DE420D2D9ED0008D4E8 /* Main.storyboard */,
 				54CE62B020A5F13B00AC350A /* Assets.xcassets */,
 				54CE62B220A5F13B00AC350A /* LaunchScreen.storyboard */,
 				54CE62B520A5F13B00AC350A /* Info.plist */,
+				54CE62D720A5F5C300AC350A /* Actor.swift */,
+				54CE62D920A5F60200AC350A /* Monster.swift */,
+				54CE62DD20A5F8A600AC350A /* Base.swift */,
+				54AA2C7720A9EB4300ABD8E6 /* MonsterAttributes.swift */,
+				5468FB6520AC90F800708814 /* Outpost.swift */,
+				5468FB6720AC919D00708814 /* Castle.swift */,
+				54565A2320ADE01900F906E2 /* CountDownTimer.swift */,
+				546A063B20B7280F00077713 /* Menu.swift */,
+				54299DEC20B864FB00F68ABE /* Button.swift */,
+				54299DEE20B86B5700F68ABE /* BloodSplater.sks */,
+				54C25F7220C5AAAA00114A8D /* LeaderboardViewController.swift */,
+				54F2914320C84FD200BDC2A2 /* MeteorAfterEffect.sks */,
+				61D5603820C8A63800EC1CE2 /* PauseMenu.swift */,
+				541588AB20C9905800582DA2 /* GameState.swift */,
+				61FC4C7020C9FA8000B69E5E /* Toast.swift */,
+				5433BBDF20CADC3A00896953 /* MainViewController.swift */,
+				61741D3720D2F38700C09071 /* RulesViewController.swift */,
+				61ABCBAD20E5474200C99BEE /* TutorialViewController.swift */,
+				61E8BA1120CD6EAC003E99C8 /* ambient_music.mp3 */,
+				61E8BA1320CD6EB3003E99C8 /* oof.wav */,
+				61E8BA1720CD6EC2003E99C8 /* meteor_crash.mp3 */,
+				61E8BA1520CD6EBA003E99C8 /* battle_music.wav */,
+				6168201220CE04C30072BD54 /* building_sound.mp3 */,
 			);
 			path = Biel_Patrick_Tower_Defence;
 			sourceTree = "<group>";
@@ -197,12 +266,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Period Three";
 				TargetAttributes = {
 					54CE629F20A5F13B00AC350A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
 					};
 					54CE62B920A5F13B00AC350A = {
 						CreatedOnToolsVersion = 9.2;
@@ -241,11 +315,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CE62AF20A5F13B00AC350A /* Main.storyboard in Resources */,
 				54CE62A620A5F13B00AC350A /* GameScene.sks in Resources */,
+				54299DEF20B86B5700F68ABE /* BloodSplater.sks in Resources */,
+				61E8BA1420CD6EB3003E99C8 /* oof.wav in Resources */,
+				61611DE520D2D9ED0008D4E8 /* Main.storyboard in Resources */,
 				54CE62B120A5F13B00AC350A /* Assets.xcassets in Resources */,
 				54CE62B420A5F13B00AC350A /* LaunchScreen.storyboard in Resources */,
+				6168201320CE04C30072BD54 /* building_sound.mp3 in Resources */,
+				61E8BA1820CD6EC2003E99C8 /* meteor_crash.mp3 in Resources */,
+				61E8BA1620CD6EBA003E99C8 /* battle_music.wav in Resources */,
 				54CE62A820A5F13B00AC350A /* Actions.sks in Resources */,
+				54F2914420C84FD200BDC2A2 /* MeteorAfterEffect.sks in Resources */,
+				61E8BA1220CD6EAC003E99C8 /* ambient_music.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +351,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CE62DE20A5F8A600AC350A /* Base.swift in Sources */,
+				61FC4C7120C9FA8000B69E5E /* Toast.swift in Sources */,
+				54AA2C7820A9EB4300ABD8E6 /* MonsterAttributes.swift in Sources */,
+				54C25F7320C5AAAA00114A8D /* LeaderboardViewController.swift in Sources */,
+				61741D3820D2F38700C09071 /* RulesViewController.swift in Sources */,
+				54CE62DA20A5F60200AC350A /* Monster.swift in Sources */,
+				54565A2420ADE01900F906E2 /* CountDownTimer.swift in Sources */,
 				54CE62AA20A5F13B00AC350A /* GameScene.swift in Sources */,
+				61ABCBAE20E5474200C99BEE /* TutorialViewController.swift in Sources */,
+				5433BBE020CADC3A00896953 /* MainViewController.swift in Sources */,
+				546A063C20B7280F00077713 /* Menu.swift in Sources */,
 				54CE62AC20A5F13B00AC350A /* GameViewController.swift in Sources */,
+				54299DED20B864FB00F68ABE /* Button.swift in Sources */,
 				54CE62A420A5F13B00AC350A /* AppDelegate.swift in Sources */,
+				5468FB6820AC919D00708814 /* Castle.swift in Sources */,
+				61D5603920C8A63800EC1CE2 /* PauseMenu.swift in Sources */,
+				541588AC20C9905900582DA2 /* GameState.swift in Sources */,
+				5468FB6620AC90F800708814 /* Outpost.swift in Sources */,
+				54CE62D820A5F5C300AC350A /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		54CE62AD20A5F13B00AC350A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54CE62AE20A5F13B00AC350A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		54CE62B220A5F13B00AC350A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +430,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -348,6 +438,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -398,6 +489,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -405,6 +497,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -439,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BD6S7RWHKM;
 				INFOPLIST_FILE = Biel_Patrick_Tower_Defence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Biel.Biel-Patrick-Tower-Defence";
@@ -453,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BD6S7RWHKM;
 				INFOPLIST_FILE = Biel_Patrick_Tower_Defence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Biel.Biel-Patrick-Tower-Defence";
