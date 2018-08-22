@@ -265,9 +265,10 @@
 		54CE629820A5F13B00AC350A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Period Three";
+				ORGANIZATIONNAME = "Patrick Biel";
 				TargetAttributes = {
 					54CE629F20A5F13B00AC350A = {
 						CreatedOnToolsVersion = 9.2;
@@ -532,7 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BD6S7RWHKM;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Biel_Patrick_Tower_Defence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Biel.Biel-Patrick-Tower-Defence";
@@ -547,7 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BD6S7RWHKM;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Biel_Patrick_Tower_Defence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Biel.Biel-Patrick-Tower-Defence";

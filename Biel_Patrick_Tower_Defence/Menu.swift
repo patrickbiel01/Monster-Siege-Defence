@@ -1,3 +1,9 @@
+//  Monster Siege Defence
+//
+//  Created by Patrick Biel on 2018-05-11.
+//  Copyright © 2018 Patrick Biel. All rights reserved.
+//
+
 import UIKit
 import SpriteKit
 

@@ -221,6 +221,12 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick Biel Copyright 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cay-Ri-Rgw">
+                                                <rect key="frame" x="36" y="738" width="186" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -235,6 +241,7 @@
                                             <constraint firstItem="qWJ-Or-Ra9" firstAttribute="top" secondItem="KDw-QB-Dvg" secondAttribute="bottom" constant="8" id="7WP-AW-RzN"/>
                                             <constraint firstItem="FsN-Qt-hi1" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="8" id="Aib-fa-PPT"/>
                                             <constraint firstAttribute="trailing" secondItem="887-pb-cmP" secondAttribute="trailing" constant="8" id="Bns-NP-u8j"/>
+                                            <constraint firstItem="cay-Ri-Rgw" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="36" id="DAi-Sg-WDD"/>
                                             <constraint firstAttribute="bottom" secondItem="17z-vv-5Qp" secondAttribute="bottom" id="E4J-Gh-6W2"/>
                                             <constraint firstItem="qWJ-Or-Ra9" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="8" id="FPo-KR-kUR"/>
                                             <constraint firstItem="wgQ-tv-6Rj" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="8" id="GxI-LV-qOX"/>
@@ -254,6 +261,7 @@
                                             <constraint firstItem="wgQ-tv-6Rj" firstAttribute="top" secondItem="ATY-CH-hbH" secondAttribute="bottom" constant="27" id="dzh-HC-V3Z"/>
                                             <constraint firstAttribute="trailing" secondItem="KDw-QB-Dvg" secondAttribute="trailing" constant="8" id="f9d-8c-Tx0"/>
                                             <constraint firstItem="thg-p4-ACb" firstAttribute="top" secondItem="uGr-dr-y6t" secondAttribute="bottom" constant="8" id="fGv-NH-jlO"/>
+                                            <constraint firstAttribute="bottom" secondItem="cay-Ri-Rgw" secondAttribute="bottom" constant="44" id="fUT-kn-nVS"/>
                                             <constraint firstItem="nS2-3I-E2f" firstAttribute="top" secondItem="thg-p4-ACb" secondAttribute="bottom" constant="8" id="fqC-hP-x5v"/>
                                             <constraint firstItem="uGr-dr-y6t" firstAttribute="top" secondItem="qWJ-Or-Ra9" secondAttribute="bottom" constant="8" id="goC-z6-3Go"/>
                                             <constraint firstItem="thg-p4-ACb" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="8" id="gpJ-P0-1A8"/>

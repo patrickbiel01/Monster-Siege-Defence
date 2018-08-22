@@ -1,6 +1,6 @@
 /*
  
- Base class used for button functionaloty
+ Base class used for button functionality
  
  Credit: morganwesemann on GitHub
  https://github.com/morganwesemann/SKButtonNode
