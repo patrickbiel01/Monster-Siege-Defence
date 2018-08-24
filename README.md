@@ -1,2 +1,2 @@
-# Monster-Siege-Defence
-Tower Defence Game for iOS devices, programmed in XCode with Swift
+# Monster Siege Defence
+An iOS Tower Defence Game programmed in Swift with the Apple's SpriteKit framework
