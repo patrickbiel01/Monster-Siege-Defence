@@ -1,3 +1,4 @@
+//  Menu.swift
 //  Monster Siege Defence
 //
 //  Created by Patrick Biel on 2018-05-11.
@@ -258,7 +259,7 @@ class Menu: SKShapeNode {
                 }
                 //Increment all timers
                 for timer in gameScene.clicked!.timers {
-                    timer.damage += castle.damageOutoutUpgradeCost
+                    timer.damage += 20
                     gameScene.coins -= castle.damageOutoutUpgradeCost
                 }
                 //Increase cost
@@ -283,7 +284,7 @@ class Menu: SKShapeNode {
             return
         }
         //Change properties to decrease cooldown
-        outpost.timers[0].damage += outpost.damageOutoutUpgradeCost
+        outpost.timers[0].damage += 30
         gameScene.coins -= outpost.damageOutoutUpgradeCost
         outpost.damageOutoutUpgradeCost *= 2
 
@@ -346,7 +347,7 @@ class Menu: SKShapeNode {
         
     }
     
-    /* Function that is called when "Decrease " button is clicked */
+    /* Function that is called when "Decrease Cooldown" button is clicked */
     @objc func upgradeCooldown(){
         guard let gameScene = inScene as? GameScene else {
             return

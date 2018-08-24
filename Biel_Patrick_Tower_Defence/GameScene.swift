@@ -1,3 +1,11 @@
+//
+//  GameScene.swift
+//  Monster Siege Defence
+//
+//  Created by Patrick Biel on 2018-05-11.
+//  Copyright © 2018 Patrick Biel. All rights reserved.
+//
+
 import SpriteKit
 import GameplayKit
 import AVFoundation
@@ -484,6 +492,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var copyAttribute = types[rand]
             //Add increasingly difficulty to attack damage
             copyAttribute.attackDmg += wave
+            //Add increasing health
+            if wave > 5 {
+                copyAttribute.health *= wave / 5
+            }
             //Create new monster
             let monster = Monster(imageNamed: types[rand].imageNamed, inScene: self, attributes: copyAttribute)
             //Store in variable

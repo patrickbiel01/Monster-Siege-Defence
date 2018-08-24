@@ -2,8 +2,8 @@
 //  Biel_Patrick_Tower_DefenceTests.swift
 //  Biel_Patrick_Tower_DefenceTests
 //
-//  Created by Period Three on 2018-05-11.
-//  Copyright © 2018 Period Three. All rights reserved.
+//  Created by Patrick Biel on 2018-05-11.
+//  Copyright © 2018 Patrick Biel. All rights reserved.
 //
 
 import XCTest
