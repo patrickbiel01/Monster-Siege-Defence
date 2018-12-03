@@ -13,6 +13,9 @@ import AVFoundation
 
 //Class that controls the GameView
 class GameViewController: UIViewController {
+    //Instance of nested SKScene
+    static var scene: GameScene?
+    
     //Variable that stores whether game is loaded
     var isLoaded = false
     //Variable for coins
@@ -112,6 +115,25 @@ class GameViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         //Stop music player
         musicPlayer.stop()
+        
+        guard let scene = GameViewController.scene else {
+            return
+        }
+        
+        /* Pause Game */
+        //End game
+        scene.isPlaying = false
+        //Iterate through monsters
+        for enemy in scene.enemiesCreated {
+            //Check if alive
+            if enemy.parent == nil {
+                continue
+            }
+            //Pause enemy
+            enemy.isPaused = true
+            
+        }
+        
     }
 
     /* Function that removes soft keyboard after use */

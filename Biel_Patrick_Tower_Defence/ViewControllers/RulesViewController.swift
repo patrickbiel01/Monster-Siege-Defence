@@ -25,8 +25,6 @@ class RulesViewController: UIViewController {
         performSegue(withIdentifier: "tutorial", sender: sender)
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tutorialViewController = segue.destination as? TutorialViewController {
             guard let button = sender as? UIButton else {

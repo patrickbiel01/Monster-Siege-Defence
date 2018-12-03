@@ -85,7 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Holds state of game
     var isPlaying = false
     //Possible types of monsters
-    let types: [MonsterAttributes] = [MonsterAttributes(imageNamed: "zombie", attackDmg: 10, runSpeed: 5, attackDelay: 2, health: 100, resistance: .None()), MonsterAttributes(imageNamed: "tank_none", attackDmg: 30, runSpeed: 10, attackDelay: 2, health: 200, resistance: .None()), MonsterAttributes(imageNamed: "runner_none", attackDmg: 15, runSpeed: 2, attackDelay: 2, health: 50, resistance: .None()), MonsterAttributes(imageNamed: "zombie", attackDmg: 10, runSpeed: 5, attackDelay: 2, health: 100, resistance: .Fire()), MonsterAttributes(imageNamed: "tank_fire", attackDmg: 30, runSpeed: 10, attackDelay: 2, health: 200, resistance: .Fire()), MonsterAttributes(imageNamed: "runner_fire", attackDmg: 15, runSpeed: 2, attackDelay: 2, health: 50, resistance: .Fire()), MonsterAttributes(imageNamed: "zombie", attackDmg: 10, runSpeed: 5, attackDelay: 2, health: 100, resistance: .Ice()), MonsterAttributes(imageNamed: "tank_ice", attackDmg: 30, runSpeed: 10, attackDelay: 2, health: 200, resistance: .Ice()), MonsterAttributes(imageNamed: "runner_ice", attackDmg: 15, runSpeed: 2, attackDelay: 2, health: 50, resistance: .Ice())]
+    let types: [MonsterAttributes] = [MonsterAttributes(imageNamed: "zombie", attackDmg: 10, runSpeed: 5, attackDelay: 2, health: 50, resistance: .None()), MonsterAttributes(imageNamed: "tank_none", attackDmg: 30, runSpeed: 10, attackDelay: 2, health: 150, resistance: .None()), MonsterAttributes(imageNamed: "runner_none", attackDmg: 15, runSpeed: 2, attackDelay: 2, health: 30, resistance: .None()), MonsterAttributes(imageNamed: "zombie", attackDmg: 10, runSpeed: 5, attackDelay: 2, health: 50, resistance: .Fire()), MonsterAttributes(imageNamed: "tank_fire", attackDmg: 30, runSpeed: 10, attackDelay: 2, health: 150, resistance: .Fire()), MonsterAttributes(imageNamed: "runner_fire", attackDmg: 15, runSpeed: 2, attackDelay: 2, health: 30, resistance: .Fire()), MonsterAttributes(imageNamed: "zombie", attackDmg: 10, runSpeed: 5, attackDelay: 2, health: 50, resistance: .Ice()), MonsterAttributes(imageNamed: "tank_ice", attackDmg: 30, runSpeed: 10, attackDelay: 2, health: 150, resistance: .Ice()), MonsterAttributes(imageNamed: "runner_ice", attackDmg: 15, runSpeed: 2, attackDelay: 2, health: 30, resistance: .Ice())]
     
     
     //////////////////////////
@@ -122,6 +122,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Initialize Labels
         spawnInfoLabel(coinLabel)
         spawnInfoLabel(scoreLabel)
+        
+        //Create lines
+        spawnVisualPath()
         
         //Show the starting label
         spawnWaveTitle()
@@ -211,6 +214,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         //If game isnt playing, do nothing
         if !isPlaying { return }
+        
+        //Set current instace of game in GameViewController
+        GameViewController.scene = self
         
         /* Loop through all enemies */
         var i = 0
@@ -468,13 +474,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(label)
         //Assign to instance
         waveLabel = label
+        
+        //Reset meteor timer
+        meteorTimer.originalTime = 60
+        meteorTimer.secondsLeft = 60
+        meteorTimer.isAttacking = false
+        meteorTimer.timer.invalidate()
+        meteorButton.label.text = "Launch Meteor"
     }
     
     
     /* Function that creates and adds enemies to scene */
     func spawnMonster() {
         //Create progressively more enemies
-        let numEnemiesSpawn = 10 + wave
+        let numEnemiesSpawn = 5 + 3*(wave-1)
         
         //Spawn x amount of enemies
         for _ in 0...numEnemiesSpawn {
@@ -482,7 +495,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var range = types.count
             if wave < 2 {
                 range = 1
-            }else if wave <= 5 {
+            }else if wave <= 3 {
                 range = 3
             }
             
@@ -493,9 +506,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //Add increasingly difficulty to attack damage
             copyAttribute.attackDmg += wave
             //Add increasing health
-            if wave > 5 {
-                copyAttribute.health *= wave / 5
-            }
+            copyAttribute.health *= ((wave+4) / 4)
             //Create new monster
             let monster = Monster(imageNamed: types[rand].imageNamed, inScene: self, attributes: copyAttribute)
             //Store in variable
@@ -589,6 +600,57 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(button)
     }
     
+    /* Function that adds a visual path for monsters to travel */
+    func spawnVisualPath() {
+        var pointLeftUp = [
+            CGPoint(x: size.width/2 + 130, y: 0),
+            CGPoint(x: 350, y: 0),
+            CGPoint(x: 250, y: 150),
+            CGPoint(x: 175, y: 150),
+            CGPoint(x: 0, y: 0)]
+        var pointLeftDown = [
+            CGPoint(x: 350, y: 0),
+            CGPoint(x: 250, y: -150),
+            CGPoint(x: 175, y: -150),
+            CGPoint(x: 0, y: 0)]
+        
+        var pointRightUp = [
+            CGPoint(x: -size.width/2 - 130, y: 0),
+            CGPoint(x: -350, y: 0),
+            CGPoint(x: -250, y: 150),
+            CGPoint(x: -175, y: 150),
+            CGPoint(x: 0, y: 0)]
+        var pointRightDown = [
+            CGPoint(x: -350, y: 0),
+            CGPoint(x: -250, y: -150),
+            CGPoint(x: -175, y: -150),
+            CGPoint(x: 0, y: 0)]
+        
+        let PATH_COLOUR = UIColor(red: 165/255, green: 90/255, blue: 50/255, alpha: 0.9)
+        
+        let lineLeftUp = SKShapeNode(points: &pointLeftUp, count: pointLeftUp.count)
+        lineLeftUp.strokeColor = PATH_COLOUR
+        lineLeftUp.lineWidth = 25
+        lineLeftUp.zPosition = 2
+        addChild(lineLeftUp)
+        let lineLeftDown = SKShapeNode(points: &pointLeftDown, count: pointLeftDown.count)
+        lineLeftDown.strokeColor = PATH_COLOUR
+        lineLeftDown.lineWidth = 25
+        lineLeftDown.zPosition = 2
+        addChild(lineLeftDown)
+        
+        let lineRightUp = SKShapeNode(points: &pointRightUp, count: pointRightUp.count)
+        lineRightUp.strokeColor = PATH_COLOUR
+        lineRightUp.lineWidth = 25
+        lineRightUp.zPosition = 2
+        addChild(lineRightUp)
+        let lineRightDown = SKShapeNode(points: &pointRightDown, count: pointRightDown.count)
+        lineRightDown.strokeColor = PATH_COLOUR
+        lineRightDown.lineWidth = 25
+        lineRightDown.zPosition = 2
+        addChild(lineRightDown)
+    }
+    
     /* Function that handles spawning of new wave */
     func spawnNewWave(){
         if enemies.isEmpty {
@@ -612,6 +674,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             moveMonsters(monsters: left, counter: 0)
             moveMonsters(monsters: right, counter: 0)
+            
+            
         }
     }
     
@@ -707,10 +771,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
-    /* Function that dtermines whether to send a meteor */
+    /* Function that determines whether to send a meteor */
     func sendMeteor(_ touches: Set<UITouch>){
         //If button clicked is meteor button
-        if buttonClicked == meteorButton {
+        if buttonClicked == meteorButton && !meteorTimer.isAttacking {
+            //Stop additional meteors from spawning
+            meteorTimer.isAttacking = true
             //Reassign time
             meteorTimer.originalTime = 60
             meteorTimer.secondsLeft = 60
@@ -733,10 +799,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     //Check if its alive
                     if enemy.parent == nil {
                         continue
-                    }
-                    //Check if timer has not expired
-                    if self.meteorTimer.isAttacking {
-                        break
                     }
                     //Check if range contains any enemies
                     if AoE.contains(enemy.position) {

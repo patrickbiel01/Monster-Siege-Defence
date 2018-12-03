@@ -11,10 +11,19 @@ import SpriteKit
 //Class for bringing up menu
 class Menu: SKShapeNode {
     
-    
+    //Subelements of Menu
     let inScene: SKScene
     var layout: [SKButtonNode]
     let type: SKButtonNode
+    var labels: [SKLabelNode] = []
+    
+    //Dimensions of buttons
+    let HEIGHT = 75
+    let WIDTH = 250
+    
+    //Font Attributes
+    let FONT = "Helvetica"
+    let FONT_SIZE: CGFloat = 25
     
     /* Base Init */
     init(scene: SKScene, _ type: SKButtonNode) {
@@ -23,7 +32,7 @@ class Menu: SKShapeNode {
         layout = []
         super.init()
         //Create rectangle and assign it to menu
-        let rect = CGRect(origin: CGPoint(x: inScene.frame.width / 2 - 250, y: inScene.frame.height / 2 - 400), size: CGSize(width: 200, height: 300))
+        let rect = CGRect(origin: CGPoint(x: inScene.frame.width / 2 - 275, y: inScene.frame.height / 2 - 500), size: CGSize(width: 250, height: 400))
         self.path = CGPath(rect: rect, transform: nil)
         zPosition = 100000
         lineWidth = 1
@@ -51,40 +60,40 @@ class Menu: SKShapeNode {
             addChild(layout[0])
             //Set action
             layout[0].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.addMeleeTower))
-            layout[0].size  = CGSize(width: 200, height: 50)
-            layout[0].position = CGPoint(x:inScene.frame.width / 2 - 150, y:20)
+            layout[0].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[0].position = CGPoint(x:inScene.frame.width / 2 - 150, y:CGFloat(3*HEIGHT))
             //Make Labels
             createLabel(gameScene: gameScene, button: layout[0], type: "")
-            layout[0].setButtonLabel(title: "Add Melee Tower", font: "Helvetica", fontSize: 20)
+            layout[0].setButtonLabel(title: "Add Melee Tower", font: FONT, fontSize: FONT_SIZE)
             createLabel(gameScene: gameScene, button: layout[0], type: "add")
             
             //Append second entry
             addChild(layout[1])
             //Set action
             layout[1].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.addRangedTower))
-            layout[1].size  = CGSize(width: 200, height: 50)
-            layout[1].position = CGPoint(x:inScene.frame.width / 2 - 150, y:95)
-            layout[1].setButtonLabel(title: "Add Archery Tower", font: "Helvetica", fontSize: 20)
+            layout[1].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[1].position = CGPoint(x:inScene.frame.width / 2 - 150, y:CGFloat(2*HEIGHT) - 20)
+            layout[1].setButtonLabel(title: "Add Archery Tower", font: FONT, fontSize: FONT_SIZE)
             createLabel(gameScene: gameScene, button: layout[1], type: "add")
             
             //Append thrird entry
             addChild(layout[2])
             //Set action
             layout[2].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.addIceTower))
-            layout[2].size  = CGSize(width: 200, height: 50)
-            layout[2].position = CGPoint(x:inScene.frame.width / 2 - 150, y:170)
+            layout[2].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[2].position = CGPoint(x:inScene.frame.width / 2 - 150, y:CGFloat(HEIGHT) - 40)
             //Make Labels
-            layout[2].setButtonLabel(title: "Add Ice Wizard Tower", font: "Helvetica", fontSize: 20)
+            layout[2].setButtonLabel(title: "Add Ice Wizard Tower", font: FONT, fontSize: FONT_SIZE)
             createLabel(gameScene: gameScene, button: layout[2], type: "add")
             
             //Append fourth entry
             addChild(layout[3])
             //Set action
             layout[3].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.addFireTower))
-            layout[3].size  = CGSize(width: 200, height: 50)
-            layout[3].position = CGPoint(x:inScene.frame.width / 2 - 150, y:245)
+            layout[3].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[3].position = CGPoint(x:inScene.frame.width / 2 - 150, y:-60)
             //Make Labels
-            layout[3].setButtonLabel(title: "Add Fire Wizard Tower", font: "Helvetica", fontSize: 20)
+            layout[3].setButtonLabel(title: "Add Fire Wizard Tower", font: FONT, fontSize: FONT_SIZE)
             createLabel(gameScene: gameScene, button: layout[3], type: "add")
             //If type specific was upgrade
         }else if type == gameScene.upgradeButton {
@@ -93,25 +102,25 @@ class Menu: SKShapeNode {
             
             //Setup button with labels and action
             layout[0].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.upgradeDamageAction))
-            layout[0].setButtonLabel(title: "Increase Damage", font: "Helvetica", fontSize: 20)
-            layout[0].size  = CGSize(width: 200, height: 50)
-            layout[0].position = CGPoint(x:inScene.frame.width / 2 - 150, y:50)
+            layout[0].setButtonLabel(title: "Increase Damage", font: FONT, fontSize: FONT_SIZE)
+            layout[0].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[0].position = CGPoint(x:inScene.frame.width / 2 - 150, y:CGFloat(3*HEIGHT))
             addChild(layout[0])
             createLabel(gameScene: gameScene, button: layout[0], type: "damage")
             
             //Setup button with labels and action
             layout[1].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.upgradeRange))
-            layout[1].setButtonLabel(title: "Increase Range", font: "Helvetica", fontSize: 20)
-            layout[1].size  = CGSize(width: 200, height: 50)
-            layout[1].position = CGPoint(x:inScene.frame.width / 2 - 150, y:120)
+            layout[1].setButtonLabel(title: "Increase Range", font: FONT, fontSize: FONT_SIZE)
+            layout[1].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[1].position = CGPoint(x:inScene.frame.width / 2 - 150, y:CGFloat(2*HEIGHT) - 20)
             addChild(layout[1])
             createLabel(gameScene: gameScene, button: layout[1], type: "range")
             
             //Setup button with labels and action
             layout[2].setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(Menu.upgradeCooldown))
-            layout[2].setButtonLabel(title: "Decrease Cooldown", font: "Helvetica", fontSize: 20)
-            layout[2].size  = CGSize(width: 200, height: 50)
-            layout[2].position = CGPoint(x:inScene.frame.width / 2 - 150, y:195)
+            layout[2].setButtonLabel(title: "Decrease Cooldown", font: FONT, fontSize: FONT_SIZE)
+            layout[2].size  = CGSize(width: WIDTH, height: HEIGHT)
+            layout[2].position = CGPoint(x:inScene.frame.width / 2 - 150, y:CGFloat(HEIGHT-40))
             addChild(layout[2])
             createLabel(gameScene: gameScene, button: layout[2], type: "cooldown")
         }
@@ -129,7 +138,7 @@ class Menu: SKShapeNode {
         //Format button labels
         button.label.position.y += 10
         let label = SKLabelNode()
-        label.fontSize = 20
+        label.fontSize = FONT_SIZE
         label.fontColor = UIColor.black
         label.position = CGPoint(x: button.position.x, y: button.position.y - 20)
         label.zPosition = 100
@@ -153,12 +162,16 @@ class Menu: SKShapeNode {
         }
         
         addChild(label)
+        labels.append(label)
         
     }
     
     /* Required init for decoding */
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        inScene = SKScene(size: CGSize(width: 0, height: 0))
+        self.type = SKButtonNode(normalTexture: SKTexture(image: #imageLiteral(resourceName: "button")), selectedTexture: SKTexture(image: #imageLiteral(resourceName: "clicked_blank")), disabledTexture: nil)
+        layout = []
+        super.init()
     }
     
     /* Function that is called when "Add Fire Wizard Tower" button is clicked */
@@ -264,7 +277,7 @@ class Menu: SKShapeNode {
                 }
                 //Increase cost
                 castle.damageOutoutUpgradeCost *= 2
-                
+                //labels[0].text = "Cost: \(castle.damageOutoutUpgradeCost)"
             }
             return
         }

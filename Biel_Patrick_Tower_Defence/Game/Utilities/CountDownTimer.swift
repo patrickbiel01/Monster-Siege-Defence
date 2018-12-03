@@ -29,11 +29,11 @@ class CountDownTimer: NSObject, NSCoding {
     
     /* Init for decoding */
     required init?(coder aDecoder: NSCoder) {
-        //DEcode secondsleft
+        //Decode secondsleft
         secondsLeft = Double(aDecoder.decodeDouble(forKey: "secondsLeft"))
-        //DEcode original time
+        //Decode original time
         originalTime = aDecoder.decodeDouble(forKey: "originalTime")
-        //DEcode damage
+        //Decode damage
         damage = aDecoder.decodeInteger(forKey: "damage")
         //Decode state
         isAttacking = aDecoder.decodeBool(forKey: "isAttacking")

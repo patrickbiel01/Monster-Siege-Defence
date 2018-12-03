@@ -211,9 +211,9 @@ class Monster: Actor {
         /* Set spawn position based on random number */
         switch rand {
         case 0:
-            position = CGPoint(x: -inScene.size.width/2 - 50, y: 0)
+            position = CGPoint(x: -inScene.size.width/2 - 130, y: 0)
         case 1:
-            position = CGPoint(x: inScene.size.width/2 + 50, y: 0)
+            position = CGPoint(x: inScene.size.width/2 + 130, y: 0)
             if !(runSpeed == 10 || runSpeed == 2) {
                 run(SKAction.rotate(byAngle: .pi, duration: 0.01))
             }

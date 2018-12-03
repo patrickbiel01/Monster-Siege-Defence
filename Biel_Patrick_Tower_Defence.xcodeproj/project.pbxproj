@@ -151,36 +151,12 @@
 			children = (
 				54CE62B520A5F13B00AC350A /* Info.plist */,
 				54CE62A320A5F13B00AC350A /* AppDelegate.swift */,
-				54CE62AB20A5F13B00AC350A /* GameViewController.swift */,
-				5433BBDF20CADC3A00896953 /* MainViewController.swift */,
-				61741D3720D2F38700C09071 /* RulesViewController.swift */,
-				61ABCBAD20E5474200C99BEE /* TutorialViewController.swift */,
-				54C25F7220C5AAAA00114A8D /* LeaderboardViewController.swift */,
-				61611DE420D2D9ED0008D4E8 /* Main.storyboard */,
+				61939D3E21B2D2F5009BECE8 /* ViewControllers */,
+				61939D4821B2D5F3009BECE8 /* StoryBoards */,
+				61939D4021B2D411009BECE8 /* Game */,
+				61939D3D21B2D2A2009BECE8 /* Sounds */,
 				54CE62B020A5F13B00AC350A /* Assets.xcassets */,
-				54CE62B220A5F13B00AC350A /* LaunchScreen.storyboard */,
-				54CE62A920A5F13B00AC350A /* GameScene.swift */,
-				54CE62D720A5F5C300AC350A /* Actor.swift */,
-				54CE62DD20A5F8A600AC350A /* Base.swift */,
-				5468FB6720AC919D00708814 /* Castle.swift */,
-				5468FB6520AC90F800708814 /* Outpost.swift */,
-				54CE62D920A5F60200AC350A /* Monster.swift */,
-				54AA2C7720A9EB4300ABD8E6 /* MonsterAttributes.swift */,
-				54565A2320ADE01900F906E2 /* CountDownTimer.swift */,
-				546A063B20B7280F00077713 /* Menu.swift */,
-				61D5603820C8A63800EC1CE2 /* PauseMenu.swift */,
-				541588AB20C9905800582DA2 /* GameState.swift */,
-				54299DEC20B864FB00F68ABE /* Button.swift */,
-				61FC4C7020C9FA8000B69E5E /* Toast.swift */,
-				54CE62A520A5F13B00AC350A /* GameScene.sks */,
-				54CE62A720A5F13B00AC350A /* Actions.sks */,
-				54299DEE20B86B5700F68ABE /* BloodSplater.sks */,
-				54F2914320C84FD200BDC2A2 /* MeteorAfterEffect.sks */,
-				61E8BA1120CD6EAC003E99C8 /* ambient_music.mp3 */,
-				61E8BA1320CD6EB3003E99C8 /* oof.wav */,
-				61E8BA1720CD6EC2003E99C8 /* meteor_crash.mp3 */,
-				61E8BA1520CD6EBA003E99C8 /* battle_music.wav */,
-				6168201220CE04C30072BD54 /* building_sound.mp3 */,
+				61939D3F21B2D331009BECE8 /* Particle Animations */,
 			);
 			path = Biel_Patrick_Tower_Defence;
 			sourceTree = "<group>";
@@ -201,6 +177,126 @@
 				54CE62CB20A5F13B00AC350A /* Info.plist */,
 			);
 			path = Biel_Patrick_Tower_DefenceUITests;
+			sourceTree = "<group>";
+		};
+		61939D3D21B2D2A2009BECE8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				61E8BA1120CD6EAC003E99C8 /* ambient_music.mp3 */,
+				61E8BA1520CD6EBA003E99C8 /* battle_music.wav */,
+				6168201220CE04C30072BD54 /* building_sound.mp3 */,
+				61E8BA1720CD6EC2003E99C8 /* meteor_crash.mp3 */,
+				61E8BA1320CD6EB3003E99C8 /* oof.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		61939D3E21B2D2F5009BECE8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5433BBDF20CADC3A00896953 /* MainViewController.swift */,
+				54CE62AB20A5F13B00AC350A /* GameViewController.swift */,
+				61741D3720D2F38700C09071 /* RulesViewController.swift */,
+				61ABCBAD20E5474200C99BEE /* TutorialViewController.swift */,
+				54C25F7220C5AAAA00114A8D /* LeaderboardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		61939D3F21B2D331009BECE8 /* Particle Animations */ = {
+			isa = PBXGroup;
+			children = (
+				54CE62A720A5F13B00AC350A /* Actions.sks */,
+				54299DEE20B86B5700F68ABE /* BloodSplater.sks */,
+				54F2914320C84FD200BDC2A2 /* MeteorAfterEffect.sks */,
+			);
+			path = "Particle Animations";
+			sourceTree = "<group>";
+		};
+		61939D4021B2D411009BECE8 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				61939D4721B2D57E009BECE8 /* Scenes */,
+				61939D4421B2D506009BECE8 /* Game Characters */,
+				61939D4321B2D4BB009BECE8 /* Persistence */,
+				61939D4221B2D493009BECE8 /* Menu */,
+				61939D4121B2D462009BECE8 /* Utilities */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		61939D4121B2D462009BECE8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				54565A2320ADE01900F906E2 /* CountDownTimer.swift */,
+				54299DEC20B864FB00F68ABE /* Button.swift */,
+				61FC4C7020C9FA8000B69E5E /* Toast.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		61939D4221B2D493009BECE8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				546A063B20B7280F00077713 /* Menu.swift */,
+				61D5603820C8A63800EC1CE2 /* PauseMenu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		61939D4321B2D4BB009BECE8 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				541588AB20C9905800582DA2 /* GameState.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		61939D4421B2D506009BECE8 /* Game Characters */ = {
+			isa = PBXGroup;
+			children = (
+				54CE62D720A5F5C300AC350A /* Actor.swift */,
+				61939D4621B2D553009BECE8 /* Towers */,
+				61939D4521B2D543009BECE8 /* Enemies */,
+			);
+			path = "Game Characters";
+			sourceTree = "<group>";
+		};
+		61939D4521B2D543009BECE8 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				54CE62D920A5F60200AC350A /* Monster.swift */,
+				54AA2C7720A9EB4300ABD8E6 /* MonsterAttributes.swift */,
+			);
+			path = Enemies;
+			sourceTree = "<group>";
+		};
+		61939D4621B2D553009BECE8 /* Towers */ = {
+			isa = PBXGroup;
+			children = (
+				5468FB6520AC90F800708814 /* Outpost.swift */,
+				54CE62DD20A5F8A600AC350A /* Base.swift */,
+				5468FB6720AC919D00708814 /* Castle.swift */,
+			);
+			path = Towers;
+			sourceTree = "<group>";
+		};
+		61939D4721B2D57E009BECE8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				54CE62A920A5F13B00AC350A /* GameScene.swift */,
+				54CE62A520A5F13B00AC350A /* GameScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		61939D4821B2D5F3009BECE8 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				61611DE420D2D9ED0008D4E8 /* Main.storyboard */,
+				54CE62B220A5F13B00AC350A /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,7 +635,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Biel.Biel-Patrick-Tower-Defence";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -554,7 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Biel.Biel-Patrick-Tower-Defence";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
