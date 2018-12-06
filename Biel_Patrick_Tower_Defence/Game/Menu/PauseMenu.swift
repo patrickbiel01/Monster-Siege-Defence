@@ -108,7 +108,7 @@ class PauseMenu: SKShapeNode {
             return
         }
         //Save blank save into state
-        MainViewController.savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil)
+        MainViewController.savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil, meteorTime: 0)
         MainViewController.save()
         //Exit viewcontroller
         gameScene.viewController?.dismiss(animated: true)
@@ -123,7 +123,7 @@ class PauseMenu: SKShapeNode {
         }
         
         //Save game members into save
-        MainViewController.savedState = GameState(towerHealth: gameScene.castle!.health, wave: gameScene.wave, score: gameScene.score, coins: gameScene.coins, monsters: gameScene.enemiesCreated, outposts: gameScene.outposts, castle: gameScene.castle!)
+        MainViewController.savedState = GameState(towerHealth: gameScene.castle!.health, wave: gameScene.wave, score: gameScene.score, coins: gameScene.coins, monsters: gameScene.enemiesCreated, outposts: gameScene.outposts, castle: gameScene.castle!, meteorTime: gameScene.meteorTimer.secondsLeft)
         MainViewController.save()
         //Exit viewcontroller
         gameScene.viewController?.dismiss(animated: true)

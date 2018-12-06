@@ -39,7 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Variables to hold saved data
     var isLoaded = false
-    var savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil)
+    var savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil, meteorTime: 0)
     
     //Variable that holds which button in a menu was clicked
     var clicked: Base?
@@ -432,7 +432,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             outpost!.removeFromParent()
             addChild(outpost!)
         }
-        
+        //Load Meteor Timer
+        meteorTimer.originalTime = 60
+        meteorTimer.startTimer()
+        meteorTimer.secondsLeft = savedState.meteorTime
     }
     
     /* Function that sets properties of score and coin labels */
@@ -477,7 +480,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Reset meteor timer
         meteorTimer.originalTime = 60
-        meteorTimer.secondsLeft = 60
+        meteorTimer.secondsLeft = 0
         meteorTimer.isAttacking = false
         meteorTimer.timer.invalidate()
         meteorButton.label.text = "Launch Meteor"
@@ -675,7 +678,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             moveMonsters(monsters: left, counter: 0)
             moveMonsters(monsters: right, counter: 0)
             
-            
         }
     }
     
@@ -789,6 +791,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             clockwise: true)
             let AoE = SKShapeNode(path: path)
             
+            //Check if the game is paused, w/o it causes crashes
+            if !isPlaying {
+                return
+            }
+            
             //Animate meteor impact
             animateMeteor(touches)
             
@@ -796,6 +803,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.7) {
                 //Iterate through monsters
                 for enemy in self.enemiesCreated {
+                    //Check if the game is paused, w/o it causes crashes
+                    if !self.isPlaying {
+                        break
+                    }
                     //Check if its alive
                     if enemy.parent == nil {
                         continue
@@ -1070,7 +1081,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }))
         
         //Create new empty save
-        MainViewController.savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil)
+        MainViewController.savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil, meteorTime: 0)
         //Save state
         MainViewController.save()
         //Show alert

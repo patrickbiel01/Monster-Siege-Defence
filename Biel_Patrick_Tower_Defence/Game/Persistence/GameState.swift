@@ -28,9 +28,11 @@ class GameState: NSObject, NSCoding {
     let score: Int
     //Store coins
     let coins: Int
+    //Store meteor time
+    let meteorTime: Double
     
     /* Base Init */
-    init(towerHealth: Int, wave: Int, score: Int, coins: Int, monsters: [Monster], outposts: [Outpost?], castle: Castle?) {
+    init(towerHealth: Int, wave: Int, score: Int, coins: Int, monsters: [Monster], outposts: [Outpost?], castle: Castle?, meteorTime: Double) {
         //Assign all members
         self.towerHealth = towerHealth
         self.monsters = monsters
@@ -39,18 +41,21 @@ class GameState: NSObject, NSCoding {
         self.score = score
         self.coins = coins
         self.castle = castle
+        self.meteorTime = meteorTime
     }
     
     /* Init for decoding */
     required init(coder aDecoder: NSCoder) {
-        //DEcode score
+        //Decode score
         score = aDecoder.decodeInteger(forKey: "score")
-        //DEcode wave
+        //Decode wave
         wave = aDecoder.decodeInteger(forKey: "wave")
-        //DEcode coins
+        //Decode coins
         coins = aDecoder.decodeInteger(forKey: "coins")
-        //DEcode health
+        //Decode health
         towerHealth = aDecoder.decodeInteger(forKey: "towerHealth")
+        //Decode meteor time
+        meteorTime = aDecoder.decodeDouble(forKey: "meteor")
         //retrieve ouposts
         if let outpostsObj = aDecoder.decodeObject(forKey: "outposts") as? [Outpost?] {
             outposts = outpostsObj
@@ -75,6 +80,7 @@ class GameState: NSObject, NSCoding {
         aCoder.encode(towerHealth, forKey: "towerHealth")
         aCoder.encode(monsters, forKey: "enemiesCreated")
         aCoder.encode(castle, forKey: "castle")
+        aCoder.encode(meteorTime, forKey: "meteor")
     }
     
 }

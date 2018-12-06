@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var continueGameBtn: UIButton!
     
     //Shared instance of saved game
-    static var savedState: GameState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil)
+    static var savedState: GameState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil, meteorTime: 0)
     
     //File path from url
     static var filePath: String {
@@ -97,7 +97,7 @@ class MainViewController: UIViewController {
         
         //Check if saved state is balnk
         if  (MainViewController.savedState.towerHealth == 1000 || MainViewController.savedState.towerHealth == 0 ) && MainViewController.savedState.score == 0 {
-            MainViewController.savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil)
+            MainViewController.savedState = GameState(towerHealth: 1000, wave: 0, score: 0, coins: 0, monsters: [], outposts: [nil, nil, nil, nil], castle: nil, meteorTime: 0)
             //Dont show continue button
             continueGameBtn.isHidden = true
             continueGameBtn.isEnabled = false
