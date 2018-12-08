@@ -432,9 +432,10 @@
                                     <action selector="backButton:" destination="Hnr-EY-yx2" eventType="touchUpInside" id="GKX-wP-Wns"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TLc-HW-gWf">
-                                <rect key="frame" x="153" y="94" width="430" height="278"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TLc-HW-gWf">
+                                <rect key="frame" x="153" y="94" width="430" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Hnr-EY-yx2" id="JyE-NS-lWd"/>
                                 </connections>
@@ -455,7 +456,7 @@
                             <constraint firstItem="1nX-PO-fU7" firstAttribute="leading" secondItem="tBI-ta-Vv0" secondAttribute="leading" id="NZd-cR-2qp"/>
                             <constraint firstItem="TLc-HW-gWf" firstAttribute="leading" secondItem="tBI-ta-Vv0" secondAttribute="leading" constant="153" id="VeR-83-CPs"/>
                             <constraint firstItem="1nX-PO-fU7" firstAttribute="bottom" secondItem="tBI-ta-Vv0" secondAttribute="bottom" id="c6H-fu-jUi"/>
-                            <constraint firstItem="tBI-ta-Vv0" firstAttribute="bottom" secondItem="TLc-HW-gWf" secondAttribute="bottom" constant="42" id="fKu-hY-FN9"/>
+                            <constraint firstItem="tBI-ta-Vv0" firstAttribute="bottom" secondItem="TLc-HW-gWf" secondAttribute="bottom" id="fKu-hY-FN9"/>
                             <constraint firstItem="tBI-ta-Vv0" firstAttribute="trailing" secondItem="TLc-HW-gWf" secondAttribute="trailing" constant="153" id="fml-6T-QGU"/>
                             <constraint firstItem="suP-cF-uGx" firstAttribute="leading" secondItem="5Ha-y0-mqj" secondAttribute="trailing" constant="210" id="gz2-3w-2aq"/>
                             <constraint firstItem="1nX-PO-fU7" firstAttribute="top" secondItem="tBI-ta-Vv0" secondAttribute="top" id="ib2-Qm-rvM"/>
