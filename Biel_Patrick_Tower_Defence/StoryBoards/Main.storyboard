@@ -227,6 +227,12 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons made by Smashicons from www.flaticon.com " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUr-x7-C7C">
+                                                <rect key="frame" x="367" y="738" width="352" height="18"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -239,6 +245,8 @@
                                             <constraint firstItem="Cor-tZ-1or" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="36" id="5t0-xd-hZA"/>
                                             <constraint firstItem="ATY-CH-hbH" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="8" id="6MJ-WZ-l8a"/>
                                             <constraint firstItem="qWJ-Or-Ra9" firstAttribute="top" secondItem="KDw-QB-Dvg" secondAttribute="bottom" constant="8" id="7WP-AW-RzN"/>
+                                            <constraint firstAttribute="trailing" secondItem="YUr-x7-C7C" secondAttribute="trailing" constant="17" id="8EC-CH-fvN"/>
+                                            <constraint firstAttribute="bottom" secondItem="YUr-x7-C7C" secondAttribute="bottom" constant="44" id="8ac-S8-CEL"/>
                                             <constraint firstItem="FsN-Qt-hi1" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="8" id="Aib-fa-PPT"/>
                                             <constraint firstAttribute="trailing" secondItem="887-pb-cmP" secondAttribute="trailing" constant="8" id="Bns-NP-u8j"/>
                                             <constraint firstItem="cay-Ri-Rgw" firstAttribute="leading" secondItem="oe9-2T-bff" secondAttribute="leading" constant="36" id="DAi-Sg-WDD"/>
