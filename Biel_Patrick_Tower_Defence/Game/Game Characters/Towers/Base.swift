@@ -316,19 +316,23 @@ class Base: Actor {
             inScene.addChild(volley)
             //Set zPosition
             volley.zPosition = 99
+            //Velocity
+            let vel: CGFloat = 500
+            //Displacement
+            let displacement = pow(pow(enemy.position.x-self.position.x, 2) + pow(enemy.position.y-self.position.y, 2), 0.5)
             //Time
-            let time = 0.7
+            let time = displacement / vel // Should be around 0.7 at outer fringe of range
             //Rotate to enemy
-            volley.run(SKAction.sequence([SKAction.rotate(toAngle: findTheta(currentPosition: enemy.position, endPosition: CGPoint.zero), duration: 0.01), SKAction.move(to: position, duration: time)]))
+            volley.run(SKAction.sequence([SKAction.rotate(toAngle: findTheta(currentPosition: enemy.position, endPosition: self.position), duration: 0.01), SKAction.move(to: position, duration: TimeInterval(time))]))
             /* Delay by 0,7 sec */
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(time)) {
                 //Deal half damage if it has a resistance
                 if enemy.resistance != attackType || enemy.resistance == .None() {
                     enemy.health -= timer.damage
                 }else {
                     enemy.health -= timer.damage / 2
                 }
-                //remove arrows from scene
+                    //remove arrows from scene
                     volley.removeFromParent()
             }
             

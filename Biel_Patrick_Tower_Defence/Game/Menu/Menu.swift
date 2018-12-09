@@ -277,7 +277,9 @@ class Menu: SKShapeNode {
                 }
                 //Increase cost
                 castle.damageOutoutUpgradeCost *= 2
-                //labels[0].text = "Cost: \(castle.damageOutoutUpgradeCost)"
+                //Update label
+                ///NOTE: 2* is used because theere are 2 types of damages being upgraded
+                labels[0].text = "Cost: \(2*castle.damageOutoutUpgradeCost)"
             }
             return
         }
@@ -296,11 +298,12 @@ class Menu: SKShapeNode {
             }
             return
         }
-        //Change properties to decrease cooldown
+        //Change properties to increase damage
         outpost.timers[0].damage += 30
         gameScene.coins -= outpost.damageOutoutUpgradeCost
         outpost.damageOutoutUpgradeCost *= 2
-
+        //Update label
+        labels[0].text = "Cost: \(outpost.damageOutoutUpgradeCost)"
     }
     
     /* Function that is called when "Increase Range" button is clicked */
@@ -332,7 +335,8 @@ class Menu: SKShapeNode {
                 //Increase cost
                 castle.rangeUpgradeCost *= 2
                 castle.rangeUpgradeCount += 1
-                
+                //Update label
+                labels[1].text = "Cost: \(2*castle.rangeUpgradeCost)"
             }
             return
         }
@@ -353,11 +357,12 @@ class Menu: SKShapeNode {
             return
         }
         
-        //Change properties to decrease cooldown
+        //Change properties to increase range
         outpost.ranges[0].setScale(1.2)
         gameScene.coins -= outpost.rangeUpgradeCost
         outpost.rangeUpgradeCost *= 2
-        
+        //Update label
+        labels[1].text = "Cost: \(outpost.rangeUpgradeCost)"
     }
     
     /* Function that is called when "Decrease Cooldown" button is clicked */
@@ -390,7 +395,8 @@ class Menu: SKShapeNode {
                 //Increase cost
                 castle.cooldownUpgradeCost *= 2
                 castle.cooldownUpgradeCount += 1
-                
+                //Update label
+                labels[2].text = "Cost: \(2*castle.cooldownUpgradeCost)"
             }
             return
         }
@@ -417,6 +423,8 @@ class Menu: SKShapeNode {
         outpost.timers[0].originalTime -= 0.3
         gameScene.coins -= outpost.cooldownUpgradeCost
         outpost.cooldownUpgradeCost *= 2
+        //Update label
+        labels[2].text = "Cost: \(outpost.cooldownUpgradeCost)"
     }
     
 }

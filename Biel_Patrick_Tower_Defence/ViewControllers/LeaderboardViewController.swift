@@ -28,10 +28,10 @@ class LeaderboardViewController: UIViewController, UITableViewDataSource {
         //Retrieve object for persient data
         let userDefaults = UserDefaults.standard
         
-        //Clear UserDefaults: USED FOR TESTING
-//        let domain = Bundle.main.bundleIdentifier!
-//        UserDefaults.standard.removePersistentDomain(forName: domain)
-//        UserDefaults.standard.synchronize()
+        // Clear UserDefaults: USED FOR TESTING
+        //        let domain = Bundle.main.bundleIdentifier!
+        //        UserDefaults.standard.removePersistentDomain(forName: domain)
+        //        UserDefaults.standard.synchronize()
         
         //Retrieve high scores
         guard let highScoreNames = userDefaults.object(forKey: LeaderboardViewController.NAME_KEY) as? Array<String> else {
