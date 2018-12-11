@@ -490,15 +490,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /* Function that creates and adds enemies to scene */
     func spawnMonster() {
         //Create progressively more enemies
-        let numEnemiesSpawn = 5 + 3*(wave-1)
+        let numEnemiesSpawn = 3 + 3*(wave-1)
         
         //Spawn x amount of enemies
         for _ in 0...numEnemiesSpawn {
             //Set variety of monster based on wave
             var range = types.count
-            if wave < 2 {
+            if wave <= 3 {
                 range = 1
-            }else if wave <= 3 {
+            }else if wave < 5 {
+                range = 2
+            }else if wave >= 5 {
                 range = 3
             }
             
@@ -506,10 +508,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let rand = Int(arc4random_uniform(UInt32(range)))
             //Create copy instance
             var copyAttribute = types[rand]
+            
             //Add increasingly difficulty to attack damage
             copyAttribute.attackDmg += wave
             //Add increasing health
-            copyAttribute.health *= ((wave+4) / 4)
+            if wave >= 7 {
+                copyAttribute.health *= ((wave+(2-5)) / 2)
+            }else if wave == 5 || wave == 6 {
+                copyAttribute.health *= 2
+            }
+            
             //Create new monster
             let monster = Monster(imageNamed: types[rand].imageNamed, inScene: self, attributes: copyAttribute)
             //Store in variable
