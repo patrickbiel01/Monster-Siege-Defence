@@ -1,7 +1,7 @@
 # Monster Siege Defence
 An iOS Tower Defence Game programmed in Swift
 
-![Screenshot](http://www.patrickbiel.com/images/umsd_screenshot.png)
+![Screenshot](https://github.com/patrickbiel01/Monster-Siege-Defence/blob/master/game-screenshot.png)
 
 ## Features
 * Tower Building
@@ -17,10 +17,10 @@ git clone https://github.com/patrickbiel01/Monster-Siege-Defence.git
 ```
 
 ## Issues
-If you have any questions, please submit an [issue](https://github.com/patrickbiel01/Monster-Siege-Defence/issues).
+If you have any bugs or feature requests, please submit an [issue](https://github.com/patrickbiel01/Monster-Siege-Defence/issues).
 
 ## Contribution
-If you wish to contribute to my project, fork my project and create a [pull request](https://github.com/patrickbiel01/Monster-Siege-Defence/pulls)
+If you wish to contribute, fork my project and create a [pull request](https://github.com/patrickbiel01/Monster-Siege-Defence/pulls)
 
 ## License
-**Monster Siege Defence** is released under the GPL3.0 license. See [LICENSE](https://github.com/patrickbiel01/Monster-Siege-Defence/blob/master/LICENSE) for details.
+**Monster Siege Defence** is released under the MIT license. See [LICENSE](https://github.com/patrickbiel01/Monster-Siege-Defence/blob/master/LICENSE) for details.
